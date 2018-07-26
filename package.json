@@ -40,6 +40,5 @@
     "tslint-react": "^3.4.0",
     "typed-css-modules": "^0.3.4",
     "webpack-dev-server": "^2.10.0"
-  },
-  "proxy": "http://integration.api.otss.admin.nyu.edu/cpacsweb/v1"
+  }
 }
