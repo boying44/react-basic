@@ -16,7 +16,7 @@ app.use(express.static('dist'));
 // routing
 app.use(require('./routes/index'));
 
-console.log(app.stack);
+console.log(app.stack); // Nani the fuck
 
 const server = app.listen(app.get('port'), () => {
   console.log(`Listening on port ${app.get('port')}`);

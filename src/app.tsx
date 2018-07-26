@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 import Component from './components/component';
-// import './css/style.css';
+
 
 const App = () => (
   <div>
