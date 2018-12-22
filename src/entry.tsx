@@ -10,9 +10,20 @@ const store = createStore(reducer);
 // TODO: Connect Redux store to inspector
 // window.store = store;
 
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('app')
-);
+function renderApp() {
+  ReactDOM.render(
+    <Provider store={store}>
+      <App />
+    </Provider>,
+    document.getElementById('app')
+  );
+}
+
+renderApp();
+
+// if (module.hot) {
+//   module.hot.accept('./routes', () => {
+//       routes = require<typeof RoutesModule>('./routes').routes;
+//       renderApp();
+//   });
+// }

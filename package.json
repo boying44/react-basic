@@ -1,7 +1,7 @@
 {
   "name": "react-redux-express",
   "version": "1.0.0",
-  "description": "A template for React-redux apps running on Express",
+  "description": "A template a for React-Redux app running on Express",
   "main": "app.js",
   "scripts": {
     "prestart": "webpack",
@@ -17,28 +17,29 @@
   "author": "boying44",
   "license": "MIT",
   "dependencies": {
-    "@types/react-dom": "^15.5.1",
-    "@types/react-redux": "4.4.45",
-    "@types/webpack": "2.2.15",
-    "css-loader": "^0.28.2",
+    "@types/react-dom": "^16.0.11",
+    "@types/react-redux": "6.0.11",
+    "@types/webpack": "4.4.22",
+    "css-loader": "^2.0.2",
     "express": "^4.14.0",
-    "extract-text-webpack-plugin": "2.1.2",
     "pug": "^2.0.0-beta6",
-    "react": "^15.6.2",
-    "react-dom": "^15.5.4",
-    "react-redux": "^5.0.5",
-    "redux": "^3.7.2",
-    "style-loader": "^0.18.1",
-    "typescript": "2.4.1",
-    "webpack": "2.5.1"
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-redux": "^6.0.0",
+    "redux": "^4.0.1",
+    "style-loader": "^0.23.1",
+    "typescript": "3.2.2",
+    "webpack": "4.28.1"
   },
   "devDependencies": {
-    "@types/tapable": "^0.2.5",
-    "awesome-typescript-loader": "3.2.1",
+    "@types/tapable": "^1.0.4",
+    "awesome-typescript-loader": "^5.2.1",
+    "mini-css-extract-plugin": "^0.5.0",
     "nodemon": "^1.11.0",
     "tslint": "^5.9.1",
     "tslint-react": "^3.4.0",
     "typed-css-modules": "^0.3.4",
-    "webpack-dev-server": "^2.10.0"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.11"
   }
 }

@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { IStoreState } from '../store';
+import { IStoreState } from '../StoreDefinition';
 import { IComponentAction } from '../actions/actions';
 
 const text = (state = "", action: IComponentAction) => {

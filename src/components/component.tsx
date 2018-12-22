@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { connect, Dispatch } from 'react-redux';
+import { connect } from 'react-redux';
+import { Dispatch } from 'redux';
 import actions, { IComponentAction } from '../actions/actions';
-import { IStoreState } from '../store';
+import { IStoreState } from '../StoreDefinition';
 // import * as style from '../css/style.css';
 
 interface IComponentStateProps {
