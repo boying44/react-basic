@@ -5,5 +5,5 @@ A template for applications with a frontend built with React and Redux and runni
 - [x] CSS modules
 - [] Seperate CSS files
 - [] Common Chunks
-- [] Connect Redux store to inspector
+- [x] Add redux-devtools
 - []

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 import actions, { IComponentAction } from '../actions/actions';
 import { IStoreState } from '../StoreDefinition';
-// import * as style from '../css/style.css';
+import * as style from '../css/style.css';
 
 interface IComponentStateProps {
   text: string;
@@ -17,7 +17,7 @@ class Component extends React.Component<IComponentStateProps & IComponentDIspatc
   render() {
     return (
       // <div onClick={this.props.handleClick} className={style.blue}>
-      <div onClick={this.props.handleClick}>
+      <div className={style.blue} onClick={this.props.handleClick}>
         Click here
         <br />
         {this.props.text}
