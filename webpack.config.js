@@ -60,8 +60,7 @@ const config = {
           {
             loader: 'css-loader',
             options: {
-              minimize: isProd(),
-              modules: true,
+              modules: true, // Enables CSS Modules
               sourceMap: !isProd(),
               importLoaders: 1, // Number of loaders applied before CSS loader
               localIdentName: '[name]__[local]___[hash:base64:5]'
