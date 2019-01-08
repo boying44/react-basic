@@ -29,6 +29,12 @@ function renderApp() {
   );
 }
 
-renderApp();
-
 export default App;
+
+if (module.hot) {
+  module.hot.accept('./components/component', () => {
+    renderApp();
+  });
+}
+
+renderApp();

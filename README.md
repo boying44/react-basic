@@ -8,7 +8,7 @@ A template for applications with a frontend built with React and Redux and runni
 - [ ] Common Chunks
 - [x] Add redux-devtools
 - [ ] React Router
-- [x] (?) Server Side Rendering
-- [ ] Hot reloading
+- [ ] Server Side Rendering
+- [x] React modules hot reloading
 - [ ] BundleAnalyzerPlugin
 - [x] FriendlyErrorsWebpackPlugin - make common Webpack errors more readable

@@ -1,4 +1,4 @@
-// updated for webpack v2
+// updated for webpack v2...updating for v4
 const path = require('path');
 const webpack = require('webpack');
 // const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -73,6 +73,7 @@ const config = {
   },
 
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     extractCSS,
     new CheckerPlugin(),
     new FriendlyErrorsWebpackPlugin(),
