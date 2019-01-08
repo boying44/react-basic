@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "prestart": "webpack",
-    "start": "node server.js",
-    "nodemon": "nodemon --inspect -e ts,pug,JSON,css, server.ts",
+    "start": "node backend.js",
+    "nodemon": "nodemon --inspect -e ts,pug,JSON,css, backend.js",
     "build": "webpack --display-error-details",
     "lint": "tslint .",
     "fix": "tslint --fix .",
@@ -20,6 +20,7 @@
     "@types/react-dom": "^16.0.11",
     "@types/react-redux": "6.0.11",
     "@types/webpack": "4.4.22",
+    "babel-register": "^6.26.0",
     "css-loader": "^2.0.2",
     "express": "^4.14.0",
     "pug": "^2.0.0-beta6",
@@ -28,11 +29,13 @@
     "react-redux": "^6.0.0",
     "redux": "^4.0.1",
     "typescript": "3.2.2",
-    "webpack": "4.28.1"
+    "webpack": "4.28.1",
+    "webpack-merge": "^4.2.1"
   },
   "devDependencies": {
     "@types/tapable": "^1.0.4",
     "awesome-typescript-loader": "^5.2.1",
+    "friendly-errors-webpack-plugin": "^1.7.0",
     "mini-css-extract-plugin": "^0.5.0",
     "nodemon": "^1.11.0",
     "redux-devtools-extension": "^2.13.7",

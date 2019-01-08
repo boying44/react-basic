@@ -1,7 +1,7 @@
 *~
 .vscode/
 node_modules/
-dist/build
+dist/*
 npm-debug.log
 
 # Elastic Beanstalk Files

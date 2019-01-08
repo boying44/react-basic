@@ -4,6 +4,7 @@ const webpack = require('webpack');
 // const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { TsConfigPathsPlugin, CheckerPlugin } = require('awesome-typescript-loader');
+const FriendlyErrorsWebpackPlugin = require( "friendly-errors-webpack-plugin" );
 
 const PATHS = {
   root: path.resolve(__dirname),
@@ -16,7 +17,7 @@ const isProd = () => process.env.NODE_ENV === 'production';
 const isDevBuild = !isProd();
 
 // site.css is the name of the output file, this plugin is added to the plugins array later
-const extractCSS = new MiniCssExtractPlugin('site.css'); //TODO: Produce seperate CSS files
+const extractCSS = new MiniCssExtractPlugin('site.css'); //TODO: Produce seperate CSS files so we don't have to download the whole site's CSS
 
 const config = {
   resolve: {
@@ -31,7 +32,7 @@ const config = {
   entry: {
     // Can have an array of properties for outputting multiple js files
     // Can have an array of entry points for one js file
-    'main-client': './src/entry.tsx',
+    'main-client': './src/app.tsx',
   },
 
   output: {
@@ -58,7 +59,7 @@ const config = {
           // ExtractTextPlugin.extract() should be used if there are multiple instaces of ExtractTextPlugin
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader',
+            loader: 'css-loader', // https://github.com/webpack-contrib/css-loader
             options: {
               modules: true, // Enables CSS Modules
               sourceMap: !isProd(),
@@ -74,6 +75,7 @@ const config = {
   plugins: [
     extractCSS,
     new CheckerPlugin(),
+    new FriendlyErrorsWebpackPlugin(),
   ],
   watchOptions:
     {

@@ -8,13 +8,13 @@ app.set('port', process.env.PORT || 3000);
 
 // view engine setup
 app.set('view engine', 'pug');
-app.set('views', './dist/views');
+app.set('views', './src/views');
 
 // adds dist as a root folder
 app.use(express.static('dist'));
 
 // routing
-app.use(require('./routes/index'));
+app.use(require('./src/routes/index'));
 
 console.log(app.stack); // Nani the fuck
 

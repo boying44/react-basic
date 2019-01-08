@@ -1,4 +1,6 @@
-export interface IComponentAction {
+import { Action } from "redux";
+
+export interface IComponentAction extends Action {
   type: string;
   input?: string;
 }
