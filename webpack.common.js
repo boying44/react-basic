@@ -1,10 +1,9 @@
 // updated for webpack v2...updating for v4
 const path = require('path');
-const webpack = require('webpack');
+const merge = require('webpack-merge');
 // const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { TsConfigPathsPlugin, CheckerPlugin } = require('awesome-typescript-loader');
-const FriendlyErrorsWebpackPlugin = require( "friendly-errors-webpack-plugin" );
 
 const PATHS = {
   root: path.resolve(__dirname),
@@ -20,6 +19,7 @@ const isDevBuild = !isProd();
 const extractCSS = new MiniCssExtractPlugin('site.css'); //TODO: Produce seperate CSS files so we don't have to download the whole site's CSS
 
 const config = {
+  target: 'node',
   resolve: {
     plugins: [
       new TsConfigPathsPlugin({
@@ -73,11 +73,12 @@ const config = {
   },
 
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     extractCSS,
     new CheckerPlugin(),
-    new FriendlyErrorsWebpackPlugin(),
   ],
+  optimization: {
+
+  },
   watchOptions:
     {
       // one second grace period to add minor updates that will get aggregated into the same compile
@@ -85,4 +86,14 @@ const config = {
       ignored: /node_modules/
     },
 };
+
+const prod = merge(config, {
+  mode: "production"
+})
+
+const dev = merge(config, {
+  mode: "development"
+})
+
+
 module.exports = config;

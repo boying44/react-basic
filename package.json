@@ -4,14 +4,13 @@
   "description": "A template a for React-Redux app running on Express",
   "main": "app.js",
   "scripts": {
-    "prestart": "webpack",
-    "start": "node backend.js",
+    "start": "webpack --config webpack.dev.js --display-error-details; node backend.js",
     "nodemon": "nodemon --inspect -e ts,pug,JSON,css, backend.js",
-    "build": "webpack --display-error-details",
+    "build": "webpack --config webpack.prod.js",
     "lint": "tslint .",
     "fix": "tslint --fix .",
     "css": "tcm src/",
-    "tsc": "tsc src/entry.tsx --jsx react"
+    "tsc": "tsc src/app.tsx --jsx react"
   },
   "repository": "https://github.com/boying44/react-redux-express",
   "author": "boying44",
@@ -43,6 +42,7 @@
     "tslint": "^5.9.1",
     "tslint-react": "^3.4.0",
     "typed-css-modules": "^0.3.4",
+    "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.11"
   }
