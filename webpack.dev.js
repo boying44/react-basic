@@ -10,9 +10,6 @@ module.exports = merge(common, {
   devtool: 'inline-source-map',
   plugins: [
     new FriendlyErrorsWebpackPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new BundleAnalyzerPlugin({
-      analyzerMode: "static"
-    })
+    new webpack.HotModuleReplacementPlugin()
   ]
 });

@@ -75,6 +75,9 @@ const config = {
   plugins: [
     extractCSS,
     new CheckerPlugin(),
+    new BundleAnalyzerPlugin({
+      analyzerMode: "static"
+    })
   ],
   optimization: {
 

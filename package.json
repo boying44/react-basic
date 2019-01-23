@@ -4,7 +4,7 @@
   "description": "A template a for React-Redux app running on Express",
   "main": "app.js",
   "scripts": {
-    "start": "webpack --config webpack.dev.js --display-error-details; node backend.js",
+    "start": "webpack --config webpack.dev.js --display-error-details && node backend.js",
     "nodemon": "nodemon --inspect -e ts,pug,JSON,css, backend.js",
     "build": "webpack --config webpack.prod.js",
     "lint": "tslint .",

@@ -4,7 +4,6 @@ A template for applications with a frontend built with React and Redux and runni
 ## Features
 - [x] Typescript
 - [x] CSS modules
-- [ ] Seperate CSS files
 - [ ] Common Chunks
 - [x] Add redux-devtools
 - [ ] React Router
